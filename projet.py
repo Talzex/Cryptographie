@@ -79,16 +79,11 @@ def main():
     m1 = r.puissance(cm,dCA,nCA)
     print("Clé publique d'Alice dechiffrée : " + str(m1))
 
-    if(m1 == eA):
-        print("Les clés sont identiques")
-
     cemp1 = r.puissance(cempCA,dCA,nCA)
     empreinteA1 = r.puissance(cemp1,eA,nA)
     print("Empreinte d'Alice dechiffrée avec dCA et eA : " + str(empreinteA1))
     if(empreinteA1 == empreinteA):
-        print("Empreinte Verifiée")
-
-    
+        print("Empreinte verifiée")
 
     certificat = r.puissance(eA,dCA,nCA)
     print("Envoie du cerficat à BOB... : " + str(certificat))
