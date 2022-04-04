@@ -1,7 +1,7 @@
 import random
 import numpy as np
 MIN = 100000
-MAX = 100000000000000000000000000
+MAX = 1000000000
 
 def main():
     p = random.randint(MIN, MAX)
@@ -16,7 +16,7 @@ def main():
     print("phi(n) = "+str(phi))
     
     #Clé publique
-    e = random.randint(1,1000)%(phi-1)+1 #Demander au prof
+    e = random.randint(1,1000)%(phi-1)+1 
     while(pgcd(e,phi) != 1):
         e = random.randint(1,1000)%(phi-1)+1
     print("clé publique :" + str(e) + " , " + str(n))
@@ -80,5 +80,5 @@ def  bezout(a,  b) :
         r = nouveau_r
         s = nouveau_s
     return p%b0
-main()
+#main()
 
