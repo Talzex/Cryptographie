@@ -80,7 +80,7 @@ def main():
     print("Clé publique d'Alice dechiffrée : " + str(m1))
 
     cemp1 = r.puissance(cempCA,dCA,nCA)
-    empreinteA1 = r.puissance(cemp1,eA,nA)
+    empreinteA1 = r.puissance(cemp1,m1,nA)
     print("Empreinte d'Alice dechiffrée avec dCA et eA : " + str(empreinteA1))
     if(empreinteA1 == empreinteA):
         print("Empreinte verifiée")
